@@ -34,7 +34,7 @@ to quit the interactive shell.
 ### **What is a variable ?**
 
 
-A variable is something which can change. A variable is a way of referring to a memory location used by a   computer program.In many programming languages a variable is a symbolic name for this physical location. This memory location contains values, like numbers, text or more complicated types. We can use this variable to tell the computer to save some data in this location or to retrieve some data from this location. 
+A variable is something which can change. A variable is a way of referring to a memory location used by a computer program.In many programming languages a variable is a symbolic name for this physical location. This memory location contains values, like numbers, text or more complicated types. We can use this variable to tell the computer to save some data in this location or to retrieve some data from this location. 
 
 ### **How to create a variable in Python ?**
 
@@ -57,3 +57,34 @@ Traceback (most recent call last):
 NameError: name 'my_variable' is not defined
 ~~~~ 
 this means that we have not defined the variable *my_variable* in Python.
+
+### Python Lists
+
+Python lists are counterparts of arrays in C. Python list can contain objects of different data types. Generally, all the items have the same type. A list can be written as a list of comma separated values between square brackets. The list items can be accessed using an index starting from 0. Index 0 points to the the first item. Lists have a circular index. Index -1 refers to the last item of the list.
+
+#### **Initialise a list and refer to items**
+~~~~
+>>> a = ['a','b',3,True,4.0]
+>>> a[0]
+'a'
+>>> a[-1]
+4.0
+~~~~
+
+Unlike strings which are immutable, lists are a mutable, i.e. it is possible to change their content:
+~~~~
+>>> a = ['a','b',3,True,4.0]
+>>> a[0] = 3.5
+>>> a
+[3.5,'b',3,True,4.0]
+~~~~
+
+New items can be added to the end of list using `.append()` method. In addition, lists also support concatenation, i.e. lists can be combined to form a new list.
+~~~~
+>>> a.append(5)
+>>> a
+[3.5,'b',3,True,4.0,5]
+>>> a+['Python 3',False]
+[3.5,'b',3,True,4.0,5,'Python 3',False]
+~~~~
+
